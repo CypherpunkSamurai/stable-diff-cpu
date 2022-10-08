@@ -59,8 +59,9 @@ parser.add_argument("--precision", type=str, help="evaluate at this precision", 
 cmd_opts = parser.parse_args()
 
 cpu = torch.device("cpu")
-gpu = torch.device("cuda")
-device = gpu if torch.cuda.is_available() else cpu
+#gpu = torch.device("cuda")
+#device = gpu if torch.cuda.is_available() else cpu
+device = cpu
 
 css_hide_progressbar = """
 .wrap .m-12 svg { display:none!important; }
